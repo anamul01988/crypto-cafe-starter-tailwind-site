@@ -1,5 +1,6 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
+import CoinDetails from './components/CoinDetails/CoinDetails'
 import Coins from './components/Coins/Coins'
 import Contact from './components/Contact/Contact'
 import Footer from './components/Footer/Footer'
@@ -12,7 +13,8 @@ const App = () => {
       <Header/>
         <Routes>
         <Route path="/" element={< Homepage/>} />
-        <Route path="coins" element={<Coins/>} />
+        <Route path="/coins" element={<Coins/>} />
+        <Route path="/coin-details/:id" element={<CoinDetails/>} />
         <Route path="/contact" element={<Contact/>} />
       </Routes>
       <Footer/>
